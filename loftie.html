@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loftie passion and food</title>
+    <link rel="icon" href="https://media.canva.com/v2/image-resize/format:JPG/height:452/quality:92/uri:ifs%3A%2F%2FM%2Fcaa98898-632a-497e-b5df-68e7c61ad309/watermark:F/width:800?csig=AAAAAAAAAAAAAAAAAAAAAHXJyF1zhenet-yuQWLiVU_lRMZPkgOGr7Peoy08aUs_&exp=1748410451&osig=AAAAAAAAAAAAAAAAAAAAADazSS2LywxUv7T8bXtCb8etjmdh2u0D8zS7PH_NwRzy&signer=media-rpc&x-canva-quality=screen">
+    <link rel="stylesheet" href="restaurante.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://media.canva.com/v2/image-resize/format:JPG/height:452/quality:92/uri:ifs%3A%2F%2FM%2Fcaa98898-632a-497e-b5df-68e7c61ad309/watermark:F/width:800?csig=AAAAAAAAAAAAAAAAAAAAAHXJyF1zhenet-yuQWLiVU_lRMZPkgOGr7Peoy08aUs_&exp=1748410451&osig=AAAAAAAAAAAAAAAAAAAAADazSS2LywxUv7T8bXtCb8etjmdh2u0D8zS7PH_NwRzy&signer=media-rpc&x-canva-quality=screen" alt="logo loftie" class="logo img">
+            <h2 class="logo-nombre"><i>Loftie passion and coffee</i></h2>
+        </div>
+        <nav>
+            <a href="#inicio" class="nav-link">Inicio</a>
+            <a href="#menu" class="nav-link">Menú</a>
+            <a href="#galeria" class="nav-link">Galería</a>
+            <a href="#contacto" class="nav-link">Contacto</a>
+        </nav>
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="Busca aquí...">
+            <label for="search-box">🔍</label>
+        </div>
+    </header>
+
+    <!-- SECCIÓN HERO -->
+    <section id="inicio" class="hero section">
+        <div class="container">
+            <div class="hero__content">
+                <h1>Bienvenidos a Loftie</h1>
+                <p>La cafetería artesanal donde cada taza cuenta una historia. Disfruta del mejor café de especialidad, postres caseros y un ambiente acogedor que te hará sentir como en casa.</p>
+                <div class="hero__buttons">
+                    <a href="#menu" class="btn btn--primary">Ver Nuestro Menú</a>
+                    <a href="#about" class="btn btn--secondary">Conoce Nuestra Historia</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN ABOUT -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="about__content">
+                <div class="about__text">
+                    <h2>Nuestra Pasión por el Café</h2>
+                    <p><strong>Loftie</strong> nació del amor por el café artesanal y el deseo de crear un espacio único donde la comunidad pueda reunirse. Desde 2018, hemos sido más que una cafetería: somos un punto de encuentro para estudiantes, profesionales y amantes del buen café.</p>
+                    <p>Seleccionamos cuidadosamente nuestros granos de café de fincas sostenibles de Colombia, garantizando que cada taza ofrezca una experiencia única. Nuestros baristas expertos preparan cada bebida con técnicas artesanales que resaltan los sabores naturales del café.</p>
+                    <p>En Loftie, creemos que un buen café puede cambiar tu día, y un gran ambiente puede cambiar tu perspectiva.</p>
+                    <div class="mt-4">
+                        <h4>¿Por qué elegir Loftie?</h4>
+                        <ul>
+                            <li>Café 100% colombiano de origen sostenible</li>
+                            <li>Baristas certificados y apasionados</li>
+                            <li>Ambiente acogedor con WiFi gratuito</li>
+                            <li>Postres y snacks caseros frescos diariamente</li>
+                            <li>Espacio ideal para trabajo y estudio</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about__image">
+                    <span><img src="/menu.jpeg" alt=""></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN MENÚ -->
+    <section id="menu" class="menu section">
+        <div class="container">
+            <h2 class="menu__title">Nuestro Menú</h2>
+            <p class="text-center mb-4">Descubre nuestra selección de cafés de especialidad, bebidas artesanales y deliciosos acompañamientos.</p>
+            
+            <div class="menu__categories">
+                <button class="menu__category-btn active" onclick="filterMenu('all')">Todo</button>
+                <button class="menu__category-btn" onclick="filterMenu('coffee')">Cafés</button>
+                <button class="menu__category-btn" onclick="filterMenu('drinks')">Bebidas</button>
+                <button class="menu__category-btn" onclick="filterMenu('food')">Comida</button>
+                <button class="menu__category-btn" onclick="filterMenu('desserts')">Postres</button>
+            </div>
+            
+            <div class="menu__grid" id="menuGrid">
+                <!-- Cafés -->
+                <article class="menu-card menu-card--featured" data-category="coffee">
+                    <div class="menu-card__image">
+                        <span>☕ Espresso Signature</span>
+                    </div>
+                    <div class="menu-card__content">
+                        <h3 class="menu-card__name">Espresso Signature Loftie</h3>
+                        <p class="menu-card__description">
+                            Nuestro blend exclusivo de granos arábica colombianos, tostado medio para resaltar notas de chocolate y caramelo.
+                        </p>
+                        <div class="menu-card__footer">
+                            <span class="menu-card__price">$4.500</span>
+                            <button class="btn btn--secondary menu-card__button">Ordenar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-category="coffee">
+                    <div class="menu-card__image">
+                        <span>☕ Americano</span>
+                    </div>
+                    <div class="menu-card__content">
+                        <h3 class="menu-card__name">Americano</h3>
+                        <p class="menu-card__description">
+                            Espresso doble diluido con agua caliente, perfecto para quienes disfrutan un café suave pero intenso.
+                        </p>
+                        <div class="menu-card__footer">
+                            <span class="menu-card__price">$5.200</span>
+                            <button class="btn btn--secondary menu-card__button">Ordenar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-category="coffee">
+                    <div class="menu-card__image">
+                        <span>☕ Cappuccino</span>
+                    </div>
+                    <div class="menu-card__content">
+                        <h3 class="menu-card__name">Cappuccino Artesanal</h3>
+                        <p class="menu-card__description">
+                            Espresso con leche vaporizada y espuma cremosa, decorado con arte latte personalizado.
+                        </p>
+                        <div class="menu-card__footer">
+                            <span class="menu-card__price">$6.800</span>
+                            <button class="btn btn--secondary menu-card__button">Ordenar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-category="drinks">
+                    <div class="menu-card__image">
+                        <span>🧊 Cold Brew</span>
+                    </div>
+                    <div class="menu-card__content">
+                        <h3 class="menu-card__name">Cold Brew Signature</h3>
+                        <p class="menu-card__description">
+                            Café extraído en frío durante 18 horas, suave y refrescante, servido con hielo y opcional leche de almendras.
+                        </p>
+                        <div class="menu-card__footer">
+                            <span class="menu-card__price">$7.500</span>
+                            <button class="btn btn--secondary menu-card__button">Ordenar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-category="drinks">
+                    <div class="menu-card__image">
+                        <span>🍃 Matcha Latte</span>
+                    </div>
+                    <div class="menu-card__content">
+                        <h3 class="menu-card__name">Matcha Latte Premium</h3>
+                        <p class="menu-card__description">
+                            Té matcha japonés de primera calidad mezclado con leche vaporizada y un toque de vainilla.
+                        </p>
+                        <div class="menu-card__footer">
+                            <span class="menu-card__price">$8.200</span>
+                            <button class="btn btn--secondary menu-card__button">Ordenar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-category="food">
+                    <div class="menu-card__image">
+                        <span>🥪 Sandwich</span>
+                    </div>
+                    <div class="menu-card__content">
+                        <h3 class="menu-card__name">Sandwich Club</h3>
+                        <p class="menu-card__description">
+                            Pan artesanal con pavo, queso, lechuga fresca, tomate y nuestra salsa especial.
+                        </p>
+                        <div class="menu-card__footer">
+                            <span class="menu-card__price">$12.000</span>
+                            <button class="btn btn--secondary menu-card__button">Ordenar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-category="desserts">
+                    <div class="menu-card__image">
+                        <span>🧁 Muffin</span>
+                    </div>
+                    <div class="menu-card__content">
+                        <h3 class="menu-card__name">Muffin de Arándanos</h3>
+                        <p class="menu-card__description">
+                            Muffin casero con arándanos frescos y un toque de limón, perfecto acompañante para tu café.
+                        </p>
+                        <div class="menu-card__footer">
+                            <span class="menu-card__price">$5.500</span>
+                            <button class="btn btn--secondary menu-card__button">Ordenar</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Sección de Imágenes del Menú -->
+            <div class="menu-images">
+                <div class="menu-image-card">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNDAwIiBmaWxsPSIjRjVGNURDIi8+CiAgICA8dGV4dCB4PSIzMDAiIHk9IjIwMCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjI0IiBmaWxsPSIjNjY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+Q2Fmw6lzICYgQmViaWRhczwvdGV4dD4KICA8L3N2Zz4=" alt="Menú de Cafés y Bebidas">
+                    <div class="menu-image-card__title">Cafés & Bebidas Especiales</div>
+                </div>
+                <!-- SECCIÓN GALERÍA -->
+    <section id="galeria" class="galeria section">
+        <div class="container">
+            <h2>Galería</h2>
+            <p class="mb-4">Descubre el ambiente único de Loftie y nuestras creaciones culinarias.</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="/api/placeholder/600/400" alt="Tacos gourmet con ingredientes frescos servidos en pizarra negra" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3>Tacos Artesanales</h3>
+                        <p>Creaciones gourmet con ingredientes frescos</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="c:\Users\USER\Downloads\galeria 1.jpeg" alt="Sandwich" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3>Arte en Cada Taza</h3>
+                        <p>Sandwich y limonadas Especiales</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="/api/placeholder/600/400" alt="Ensalada gourmet con salmón y cóctel artesanal" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3>Experiencia Completa</h3>
+                        <p>Platos frescos y cócteles únicos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+                
+                <div class="menu-image-card">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNDAwIiBmaWxsPSIjRkFFQkQ3Ii8+CiAgICA8dGV4dCB4PSIzMDAiIHk9IjIwMCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250L
